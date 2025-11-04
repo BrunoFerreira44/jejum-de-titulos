@@ -1,0 +1,47 @@
+services:
+  backend:
+    build: ./backend
+    container_name: backend
+    ports:
+      - "8080:8080"
+    networks:
+      - minha-network
+    depends_on:
+      - mysql
+    environment:
+      - FRONTEND_URL=http://localhost:3000
+#      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/leprodutos
+#      SPRING_DATASOURCE_USERNAME: root
+#      SPRING_DATASOURCE_PASSWORD: root
+
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    ports:
+      - "3000:80"
+    networks:
+      - minha-network
+    depends_on:
+      - backend
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: bfer
+      MYSQL_DATABASE: ultimos_campeoes
+      MYSQL_USER: bfer
+      MYSQL_PASSWORD: bfer
+    volumes:
+      - mysql-data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - minha-network
+
+volumes:
+  mysql-data:
+
+networks:
+  minha-network:
+    driver: bridge
