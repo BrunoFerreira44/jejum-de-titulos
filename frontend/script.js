@@ -1,12 +1,21 @@
 const lista = document.getElementById('listaTimes');
 const menuButtons = document.querySelectorAll('.menu button');
 const toggle = document.getElementById('toggle');
+const toggleContainer = document.getElementById('toggle-container');
 
 let currentEndpoint = '/api/geral-sem-estadual';
 let considerarEstadual = false;
 
 async function carregarTimes(endpoint) {
   try {
+
+    if (endpoint !== "/api/geral" && endpoint !== "/api/geral-sem-estadual") {
+      toggleContainer.classList.add('disabled');
+    }
+    else {
+      toggleContainer.classList.remove('disabled');
+    }
+
     lista.innerHTML = '<li>Carregando dados...</li>';
     const response = await fetch(`http://localhost:8080${endpoint}`);
     if (!response.ok) throw new Error('Erro ao buscar dados');
@@ -37,7 +46,7 @@ async function carregarTimes(endpoint) {
           </div>
           <div>
             <div class="team">${item.time}</div>
-            <div class="champ">${item.campeonato}</div>
+            <div class="champ">${item.campeonato} ${item.anoUltimaConquista}</div>
           </div>
         </div>
         <div class="days-container">
@@ -57,6 +66,13 @@ menuButtons.forEach(btn => {
     menuButtons.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     currentEndpoint = btn.dataset.endpoint;
+
+    // Reseta o toggle quando clicar em Geral no menu
+    if (currentEndpoint == "/api/geral-sem-estadual") {
+      considerarEstadual = false; // Reset toggle
+      toggle.classList.remove('active');
+    }
+
     carregarTimes(currentEndpoint);
   });
 });

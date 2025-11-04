@@ -14,7 +14,7 @@ body {
 
 /* ===== MENU LATERAL ===== */
 .sidebar {
-  width: 220px;
+  /* width: 250px; */
   background: #1e1e2f;
   color: white;
   padding: 20px;
@@ -182,4 +182,8 @@ li:hover {
   background-position: center; /* Centraliza a imagem */
   width: 5rem;
   height: 5rem;
+}
+
+.disabled {
+  display: none;
 }
