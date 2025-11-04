@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jejum de Títulos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div>
+      <h2 style="margin-bottom:20px;">🏆 Campeonatos</h2>
+      <div class="menu">
+        <button class="active" data-endpoint="/api/geral-sem-estadual">Geral</button>
+        <button data-endpoint="/api/libertadores">Libertadores</button>
+        <button data-endpoint="/api/cdb">Copa do Brasil</button>
+        <button data-endpoint="/api/brasileirao">Brasileirão</button>
+        <button data-endpoint="/api/estadual">Estadual</button>
+      </div>
+    </div>
+    <small style="color:#aaa;">© 2025 - Últimos Campeões</small>
+  </aside>
+
+  <main class="content">
+    <header>
+      <h1>Jejum de Títulos</h1>
+      <div class="toggle-container">
+        <span class="toggle-label">Considerar estadual</span>
+        <div id="toggle" class="toggle"></div>
+      </div>
+    </header>
+
+    <ul id="listaTimes">
+      <li>Carregando dados...</li>
+    </ul>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

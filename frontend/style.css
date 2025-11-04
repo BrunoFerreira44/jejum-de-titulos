@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* ===== MENU LATERAL ===== */
+.sidebar {
+  width: 220px;
+  background: #1e1e2f;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.menu button {
+  background: none;
+  border: none;
+  color: #ddd;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.menu button:hover,
+.menu button.active {
+  background: #33334d;
+  color: #fff;
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+  overflow-y: auto;
+  position: relative;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* ===== TOGGLE BUTTON ===== */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toggle-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.toggle {
+  position: relative;
+  width: 50px;
+  height: 25px;
+  background: #ccc;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.toggle::after {
+  content: '';
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  background: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+
+.toggle.active {
+  background: #4CAF50;
+}
+
+.toggle.active::after {
+  transform: translateX(25px);
+}
+
+/* ===== LISTA ===== */
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px; */
+  gap: 1rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  width: 80%;
+  background: white;
+  border-radius: 10px;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+li:hover {
+  transform: scale(1.02);
+}
+
+.team-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.team {
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.days-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.days {
+  font-weight: 600;
+  font-size: 2.7rem;
+  color: #666;
+}
+
+.days-complement {
+  font-weight: 500;
+  color: #666;
+  font-size: 20px;
+}
+
+.champ {
+  font-size: 14px;
+  color: #888;
+}
+
+.img-time {
+  background-size: contain; /* Ajusta a imagem para caber no elemento */
+  background-repeat: no-repeat; /* Evita que a imagem se repita */
+  background-position: center; /* Centraliza a imagem */
+  width: 5rem;
+  height: 5rem;
+}

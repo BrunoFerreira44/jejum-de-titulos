@@ -1,0 +1,56 @@
+INSERT INTO titulos (nome_time, campeonato, data_ultima_conquista, quantidade_de_titulos, img_url)
+VALUES
+-- **CAMPEONATO BRASILEIRO SÉRIE A** (Considerando Taça Brasil e Robertão)
+('Palmeiras', 'BRASILEIRAO', '2023-12-06', 12, 'https://upload.wikimedia.org/wikipedia/commons/1/10/Palmeiras_logo.svg'),
+('Santos', 'BRASILEIRAO', '2004-12-19', 8, 'https://vetores.org/d/santos.svg'),
+('Flamengo', 'BRASILEIRAO', '2020-02-25', 8, 'https://vetores.org/d/flamengo.svg'),
+('Corinthians', 'BRASILEIRAO', '2017-11-26', 7, 'https://vetores.org/d/corinthians.svg'),
+('São Paulo', 'BRASILEIRAO', '2008-12-07', 6, 'https://vetores.org/d/sao-paulo-futebol-clube.svg'),
+('Cruzeiro', 'BRASILEIRAO', '2014-11-23', 4, 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Cruzeiro_Esporte_Clube_%28logo%29.svg/474px-Cruzeiro_Esporte_Clube_%28logo%29.svg.png'),
+('Vasco', 'BRASILEIRAO', '2000-12-30', 4, 'https://vetores.org/d/vasco-da-gama.svg'),
+('Fluminense', 'BRASILEIRAO', '2012-11-11', 4, 'https://vetores.org/d/fluminense.svg'),
+('Internacional', 'BRASILEIRAO', '1979-12-23', 3, 'https://vetores.org/d/internacional.svg'),
+('Atletico Mineiro', 'BRASILEIRAO', '2021-12-05', 3, 'https://vetores.org/d/atletico-mineiro.svg'),
+('Botafogo', 'BRASILEIRAO', '2024-12-17', 3, 'https://vetores.org/d/botafogo.svg'),
+('Grêmio', 'BRASILEIRAO', '1996-12-15', 2, 'https://vetores.org/d/gremio.svg'),
+
+-- **COPA LIBERTADORES DA AMÉRICA**
+('Palmeiras', 'LIBERTADORES', '2021-11-27', 3, 'https://upload.wikimedia.org/wikipedia/commons/1/10/Palmeiras_logo.svg'),
+('São Paulo', 'LIBERTADORES', '2005-07-14', 3, 'https://vetores.org/d/sao-paulo-futebol-clube.svg'),
+('Santos', 'LIBERTADORES', '2011-06-22', 3, 'https://vetores.org/d/santos.svg'),
+('Flamengo', 'LIBERTADORES', '2022-10-29', 3, 'https://vetores.org/d/flamengo.svg'),
+('Grêmio', 'LIBERTADORES', '2017-11-29', 3, 'https://vetores.org/d/gremio.svg'),
+('Cruzeiro', 'LIBERTADORES', '1997-08-13', 2, 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Cruzeiro_Esporte_Clube_%28logo%29.svg/474px-Cruzeiro_Esporte_Clube_%28logo%29.svg.png'),
+('Internacional', 'LIBERTADORES', '2010-08-18', 2, 'https://vetores.org/d/internacional.svg'),
+('Fluminense', 'LIBERTADORES', '2023-11-04', 1, 'https://vetores.org/d/fluminense.svg'),
+('Corinthians', 'LIBERTADORES', '2012-07-04', 1, 'https://vetores.org/d/corinthians.svg'),
+('Vasco', 'LIBERTADORES', '1998-08-26', 1, 'https://vetores.org/d/vasco-da-gama.svg'),
+('Atletico Mineiro', 'LIBERTADORES', '2013-07-24', 1, 'https://vetores.org/d/atletico-mineiro.svg'),
+('Botafogo', 'LIBERTADORES', '2024-11-29', 1, 'https://vetores.org/d/botafogo.svg'),
+
+-- **COPA DO BRASIL**
+('Cruzeiro', 'COPA DO BRASIL', '2018-10-17', 6, 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Cruzeiro_Esporte_Clube_%28logo%29.svg/474px-Cruzeiro_Esporte_Clube_%28logo%29.svg.png'),
+('Grêmio', 'COPA DO BRASIL', '2016-12-07', 5, 'https://vetores.org/d/gremio.svg'),
+('Flamengo', 'COPA DO BRASIL', '2024-10-19', 5, 'https://vetores.org/d/flamengo.svg'),
+('Palmeiras', 'COPA DO BRASIL', '2020-03-07', 4, 'https://upload.wikimedia.org/wikipedia/commons/1/10/Palmeiras_logo.svg'),
+('Corinthians', 'COPA DO BRASIL', '2009-07-01', 3, 'https://vetores.org/d/corinthians.svg'),
+('Atletico Mineiro', 'COPA DO BRASIL', '2021-12-15', 2, 'https://vetores.org/d/atletico-mineiro.svg'),
+('Internacional', 'COPA DO BRASIL', '1992-12-13', 1, 'https://vetores.org/d/internacional.svg'),
+('São Paulo', 'COPA DO BRASIL', '2023-09-24', 1, 'https://vetores.org/d/sao-paulo-futebol-clube.svg'),
+('Fluminense', 'COPA DO BRASIL', '2007-06-06', 1, 'https://vetores.org/d/fluminense.svg'),
+('Vasco', 'COPA DO BRASIL', '2011-06-08', 1, 'https://vetores.org/d/vasco-da-gama.svg'),
+('Santos', 'COPA DO BRASIL', '2010-08-04', 1, 'https://vetores.org/d/santos.svg'),
+
+-- Títulos e datas aproximadas no final da temporada de estaduais (Março-Abril)
+('Palmeiras', 'ESTADUAL', '2024-04-07', 26, 'https://upload.wikimedia.org/wikipedia/commons/1/10/Palmeiras_logo.svg'),
+('Corinthians', 'ESTADUAL', '2025-03-27', 31, 'https://vetores.org/d/corinthians.svg'),
+('São Paulo', 'ESTADUAL', '2021-05-23', 22, 'https://vetores.org/d/sao-paulo-futebol-clube.svg'),
+('Santos', 'ESTADUAL', '2016-05-08', 22, 'https://vetores.org/d/santos.svg'),
+('Flamengo', 'ESTADUAL', '2025-03-12', 39, 'https://vetores.org/d/flamengo.svg'),
+('Fluminense', 'ESTADUAL', '2023-04-09', 33, 'https://vetores.org/d/fluminense.svg'),
+('Vasco', 'ESTADUAL', '2016-05-08', 24, 'https://vetores.org/d/vasco-da-gama.svg'),
+('Botafogo', 'ESTADUAL', '2018-08-11', 21, 'https://vetores.org/d/botafogo.svg'),
+('Grêmio', 'ESTADUAL', '2024-04-06', 43, 'https://vetores.org/d/gremio.svg'),
+('Internacional', 'ESTADUAL', '2025-03-16', 46, 'https://vetores.org/d/internacional.svg'),
+('Atletico Mineiro', 'ESTADUAL', '2025-03-08', 50, 'https://vetores.org/d/atletico-mineiro.svg'),
+('Cruzeiro', 'ESTADUAL', '2019-04-20', 38, 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Cruzeiro_Esporte_Clube_%28logo%29.svg/474px-Cruzeiro_Esporte_Clube_%28logo%29.svg.png');
