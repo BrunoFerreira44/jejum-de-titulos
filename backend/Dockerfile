@@ -1,13 +1,14 @@
-# Etapa 1: build
-FROM maven:3.9.6-eclipse-temurin-17 AS builder
-WORKDIR /app
-COPY pom.xml .
-COPY src ./src
-RUN mvn clean package -DskipTests
-
-# Etapa 2: runtime
+# Imagem base apenas com o runtime do Java 17
 FROM eclipse-temurin:17-jdk
+
+# Define o diretório de trabalho dentro do container
 WORKDIR /app
-COPY --from=builder /app/target/*.jar app.jar
+
+# Copia o JAR gerado localmente (via mvn package)
+COPY target/*.jar app.jar
+
+# Expõe a porta padrão do Spring Boot
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "-Dspring.profiles.active=docker", "app.jar"]
+
+# Define o comando de inicialização com o perfil docker
+ENTRYPOINT ["java", "-jar", "app.jar", "--spring.profiles.active=docker"]

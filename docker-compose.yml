@@ -7,12 +7,8 @@ services:
     networks:
       - minha-network
     depends_on:
-      - mysql
-    environment:
-      - FRONTEND_URL=http://localhost:3000
-#      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/leprodutos
-#      SPRING_DATASOURCE_USERNAME: root
-#      SPRING_DATASOURCE_PASSWORD: root
+      mysql:
+        condition: service_healthy
 
   frontend:
     build: ./frontend
@@ -27,6 +23,7 @@ services:
   mysql:
     image: mysql:8.0
     container_name: mysql
+    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: bfer
       MYSQL_DATABASE: ultimos_campeoes
@@ -38,6 +35,12 @@ services:
       - "3306:3306"
     networks:
       - minha-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
 
 volumes:
   mysql-data:
